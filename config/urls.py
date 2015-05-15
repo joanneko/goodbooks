@@ -11,8 +11,12 @@ urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name="home"),
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name="about"),
     url(r'^contact/$', TemplateView.as_view(template_name='pages/contact.html'), name="contact"), 
+    url(r'^recommendations/$', TemplateView.as_view(template_name='pages/recommendations.html'), name="recommendations"),
     # Django Admin
     url(r'^admin/', include(admin.site.urls)),
+
+    
+
 
     # User management
     url(r'^users/', include("goodbooks.users.urls", namespace="users")),
