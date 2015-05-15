@@ -1,14 +1,18 @@
 {% extends "page_base.html" %}
 
+{% block title %} all recommendations {% endblock %}
+<body>
 
-{% block title %} about {% endblock %}
 
 {% block paragraph %}
-aggregator for good recommendations. 
 
-<p>
 current categories: 
 	<a href= "{% url 'recommend_all' %}">all</a>, books, movies, music
+
+<br>
+<p>
+
 </p>
 
 {% endblock %}
+</body>

@@ -11,7 +11,8 @@ urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name="home"),
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name="about"),
     url(r'^contact/$', TemplateView.as_view(template_name='pages/contact.html'), name="contact"), 
-    url(r'^recommendations/$', TemplateView.as_view(template_name='pages/recommendations.html'), name="recommendations"),
+    url(r'^recommendations/$', TemplateView.as_view(template_name='recommend_all/front.html'), name="recommendations"),
+    url(r'^recommendations/all$', TemplateView.as_view(template_name='recommend_all/all.html'), name="recommend_all"),
     # Django Admin
     url(r'^admin/', include(admin.site.urls)),
 
