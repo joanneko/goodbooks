@@ -6,12 +6,16 @@
 
 {% block paragraph %}
 
-current categories: 
-	<a href= "{% url 'recommend_all' %}">all</a>, books, movies, music
+<p>
+current categories:	<a href= "{% url 'all' %}"> all </a>, books, movies, music 
+</p>
+
 
 <br>
 <p>
-
+{% for p in books %}
+written : {{ p.title }}
+{% endfor %}
 </p>
 
 {% endblock %}
