@@ -14,6 +14,12 @@ urlpatterns = [
     url(r'^recommendations/$', TemplateView.as_view(template_name='recommend_all/front.html'), name="recommendations"),
     url(r'^recommendations/all$', 'goodbooks.recommend_all.views.index', name="all"),
     # url(r'^recommend_all/all$', TemplateView.as_view(template_name='recommend_all/all.html'), name="recommend_all"),
+    url(r'^recommendations/books$', 'goodbooks.recommend_all.views.books', name="books"),
+    url(r'^recommendations/movies$', 'goodbooks.recommend_all.views.movies', name="movies"),
+    url(r'^recommendations/music$', 'goodbooks.recommend_all.views.music', name="music"),
+    url(r'^recommendations/suggest_book$', 'goodbooks.recommend_all.views.suggest_book', name="suggest_book"),
+    url(r'^recommendations/suggest_movie$', 'goodbooks.recommend_all.views.suggest_movie', name="suggest_movie"),
+    url(r'^recommendations/suggest_music$', 'goodbooks.recommend_all.views.suggest_music', name="suggest_music"),
     # Django Admin
     url(r'^admin/', include(admin.site.urls)),
 
